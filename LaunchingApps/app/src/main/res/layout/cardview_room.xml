@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_room"
+    android:layout_width="@dimen/onehundred_sp"
+    android:layout_height="@dimen/onehundred_sp"
+    android:layout_margin="@dimen/ten_dp"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/two_dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvOrder"
+            android:textSize="@dimen/fivteen_sp"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit Number"
+        android:textSize="@dimen/tweleve_sp"
+        android:textColor="#f7f3f3"
+        android:id="@+id/textView3"
+        android:layout_marginTop="@dimen/ten_sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/room_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="18"
+        android:textSize="@dimen/sixteen_sp"
+        android:textColor="#f7f5f5"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

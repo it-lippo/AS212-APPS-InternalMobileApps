@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_room"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/fifty_sp"
+    android:layout_marginRight="@dimen/two_sp"
+    android:layout_marginLeft="@dimen/two_sp"
+    android:layout_marginTop="@dimen/two_sp"
+    android:layout_marginBottom="@dimen/two_sp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/top_click"
+        android:alpha="50"
+        android:layout_width="@dimen/fifty_sp"
+        android:layout_height="@dimen/fifty_sp"
+        android:background="@drawable/rooms_available"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/two_dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+          >
+
+            <TextView
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvOrder"
+                android:textSize="@dimen/tweleve_sp"
+                android:textColor="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/room_number_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="@dimen/tweleve_sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

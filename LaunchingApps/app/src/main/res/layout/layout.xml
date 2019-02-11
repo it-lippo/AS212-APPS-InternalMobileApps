@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFF"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fourtyfive_dp"
+        android:background="#FFEBEE"
+        android:weightSum="3">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:gravity="top|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/holder_info"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:text="You can choose " />
+            <TextView
+                android:layout_toRightOf="@+id/holder_info"
+                android:id="@+id/textinfo"
+                android:textColor="#64C22E"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 units"/>
+            <TextView
+                android:layout_toRightOf="@+id/textinfo"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" left"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:background="#FF5252"
+                android:layout_width="match_parent"
+                android:textColor="#ffff"
+                android:text="Clear"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.itams.visionet.customerserviceapps.animation.ZoomRelative
+        android:layout_below="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55sp"
+        android:layout_marginLeft="1sp"
+        android:layout_marginRight="1sp"
+        android:layout_marginTop="5sp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transcriptMode="normal"/>
+    </com.itams.visionet.customerserviceapps.animation.ZoomRelative>
+
+
+    <LinearLayout
+
+        android:id="@+id/LLButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_orange_light"
+            android:text="Pesan"
+            android:visibility="gone"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnBeli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_light"
+            android:text="Submit"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

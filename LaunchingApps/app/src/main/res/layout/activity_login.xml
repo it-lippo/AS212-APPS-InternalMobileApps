@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/bg">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/twenty_dp"
+            android:paddingRight="@dimen/twenty_dp">
+
+            <ImageView
+                android:id="@+id/wolf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/onehundredfifty_dp"
+                android:src="@drawable/lippohomes"
+                android:layout_marginTop="@dimen/fifty_dp"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/eighty_dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_spinner_login"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:paddingLeft="@dimen/twentyfive_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twentythree_dp"
+                    android:id="@+id/spinnerDomain" />
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="#52FFFFFF"
+                    android:textColorHint="@color/white"
+                    android:hint="Username"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="@dimen/twenty_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:drawableLeft="@drawable/email"
+                    android:drawablePadding="@dimen/sixteen_dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fivteen_dp">
+                </EditText>
+
+                <EditText
+                    android:textColor="@color/white"
+                    android:id="@+id/input_password"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="#52FFFFFF"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:textColorHint="@color/white"
+                    android:paddingLeft="@dimen/twenty_dp"
+                    android:textSize="@dimen/fivteen_dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:layout_marginBottom="@dimen/fivteen_dp"
+                    android:drawableLeft="@drawable/pass"
+                    android:drawablePadding="@dimen/twenty_dp">
+                </EditText>
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Log In"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/nineteen_dp"
+                    android:padding="@dimen/five_dp"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginBottom="@dimen/thirtyfive_dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cameraContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FLImageFull"
+        android:visibility="gone">
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/imageViewFull"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/FLImageFull"
+        android:layout_toEndOf="@+id/FLImageFull">
+
+        <LinearLayout
+            android:id="@+id/LLMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnChecker"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:hint="Priority Pass Number"
+                    android:textColor="#0a0909"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/fourteen_dp"
+                    android:paddingBottom="@dimen/fourteen_dp"
+                    android:textSize="@dimen/fivteen_dp"
+                    android:singleLine="true"
+                    android:maxLines="1">
+                </EditText>
+
+            </LinearLayout>
+
+            <com.journeyapps.barcodescanner.CompoundBarcodeView
+                android:id="@+id/cameraPreview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                app:zxing_framing_rect_width="@dimen/twohundredninty_dp"
+                app:zxing_framing_rect_height="@dimen/twohundred_dp"
+                app:zxing_scanner_layout="@layout/tes">
+
+            </com.journeyapps.barcodescanner.CompoundBarcodeView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:id="@+id/scView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:id="@+id/btnPriorityPass"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:paddingLeft="@dimen/thirty_dp">
+
+                        <TextView
+                            android:text="Priority Pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt10"
+                            android:textColor="@android:color/black"
+                            android:textStyle="normal|bold"
+                            android:textSize="@dimen/sixteen_dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandablePP"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:visibility="visible"
+                        android:background="@drawable/border"
+                        android:paddingTop="@dimen/ten_dp"
+                        android:paddingBottom="@dimen/ten_dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="Status"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvStatusTitle"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:layout_weight="1" />
+
+                                <TextView
+                                    android:text="Prospect"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvStatus"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="Register Time"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvRegisterTitle"
+                                    android:textColor="@android:color/black"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp" />
+
+                                <TextView
+                                    android:text="02:00 PM"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvRegisterTime"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="Dealing Time"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvDealingTitle"
+                                    android:textColor="@android:color/black"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp" />
+
+                                <TextView
+                                    android:text="02:30 PM"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvDealingTime"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="UnitCode Booked"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvUnitCodeBooked"
+                                    android:textColor="@android:color/black"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp" />
+
+                                <TextView
+                                    android:text="sdsd"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNameUnitCodeBooked"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="UnitNo Booked"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvUnitNoBooked"
+                                    android:textColor="@android:color/black"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp" />
+
+                                <TextView
+                                    android:text="no"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNameUnitNoBooked"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:id="@+id/btnCustomer"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:paddingLeft="30dp">
+
+                        <TextView
+                            android:text="Customer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtCustomer"
+                            android:textSize="@dimen/sixteen_dp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="normal|bold"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableCust"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:layout_marginLeft="@dimen/thirty_dp"
+                        android:layout_marginRight="@dimen/thirty_dp"
+                        android:visibility="visible"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="@dimen/ten_dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:text="Name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNameTitle"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/one_dp"
+                                    android:layout_marginTop="@dimen/one_dp" />
+
+                                <TextView
+                                    android:text="Alde"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvName"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:text="PSCode"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvPSCodeTitle"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/one_dp"
+                                    android:layout_marginTop="@dimen/one_dp" />
+
+                                <TextView
+                                    android:text="PSCode"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvPSCode"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:text="KTP Image"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvKtpTitle"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/one_dp"
+                                    android:layout_marginTop="@dimen/one_dp" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/onehundred_dp"
+                                    android:layout_gravity="left"
+                                    android:foregroundGravity="left"
+                                    android:id="@+id/imageViewKTP"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:text="NPWP Image"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNPWPTitle"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/one_dp"
+                                    android:layout_marginTop="@dimen/one_dp" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/onehundred_dp"
+                                    android:layout_gravity="left"
+                                    android:foregroundGravity="left"
+                                    android:id="@+id/imageViewNPWP"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:id="@+id/btnMember"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:paddingLeft="@dimen/thirty_dp">
+
+                        <TextView
+                            android:text="Member"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtMember"
+                            android:textSize="@dimen/sixteen_dp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="normal|bold"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableMember"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/thirty_dp"
+                        android:layout_marginRight="@dimen/thirty_dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:text="Name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvMemberNameTitle"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/one_dp"
+                                    android:layout_marginTop="@dimen/one_dp" />
+
+                                <TextView
+                                    android:text="Alde"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvMemberName"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:text="Member Code"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvMemberCodeTitle"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp"
+                                    android:textColor="@android:color/black"
+                                    android:layout_marginBottom="@dimen/one_dp"
+                                    android:layout_marginTop="@dimen/one_dp" />
+
+                                <TextView
+                                    android:text="PSCode"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvMemberCode"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="Scheme Code"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvSchemeCode"
+                                    android:textColor="@android:color/black"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp" />
+
+                                <TextView
+                                    android:text="0"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNumberSchemeCode"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="2"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp">
+
+                                <TextView
+                                    android:text="Scheme Name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvSchemeName"
+                                    android:textColor="@android:color/black"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/fivteen_dp" />
+
+                                <TextView
+                                    android:text="0"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNumberSchemeName"
+                                    android:layout_weight="1"
+                                    android:textSize="@dimen/thirteen_sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:id="@+id/btnOtherPP"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:paddingLeft="@dimen/thirty_dp">
+
+                        <TextView
+                            android:text="Other Priority Pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtOtherPP"
+                            android:textSize="@dimen/sixteen_dp"
+                            android:textColor="@android:color/black"
+                            android:textStyle="normal|bold"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandableOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/thirty_dp"
+                        android:layout_marginRight="@dimen/thirty_dp"
+                        android:paddingBottom="@dimen/ten_dp"
+                        android:paddingTop="@dimen/ten_dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/fourteen_sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginBottom="@dimen/one_dp"
+                                android:layout_marginTop="@dimen/one_dp"
+                                android:text="PP1"
+                                android:id="@+id/tvRelatedPPTitle" />
+
+                            <TextView
+                                android:text="TextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvRelatedPP"
+                                android:textSize="@dimen/fourteen_sp"
+                                android:layout_weight="1"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/ten_dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:id="@+id/btnChecker">
+
+            <Button
+                android:id="@+id/btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:enabled="true"
+                android:text="Check PP" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/hiasan"
+        android:layout_width="match_parent"
+        android:background="@drawable/ppinfo_bg"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:layout_height="@dimen/twohundred_dp" />
+
+</RelativeLayout>

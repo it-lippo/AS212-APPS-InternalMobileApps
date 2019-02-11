@@ -1,0 +1,2 @@
+Web Service : http://erp.sandiegohills.co.id/internalmobileappsservices/ws_launching.asmx?WSDL
+		https://testflight.lippohomes.com/internalmobileappsservicedev/ws_launching.asmx?WSDL

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "480463647731",
+    "firebase_url": "https://customerservice-db6f7.firebaseio.com",
+    "project_id": "customerservice-db6f7",
+    "storage_bucket": "customerservice-db6f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480463647731:android:651ca982536fdd82",
+        "android_client_info": {
+          "package_name": "com.itams.visionet.customerserviceapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480463647731-engotjo541tskgi47eft154sff5lq4r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqHun_5zyhz7poRDyh7QWZAWkGMESlWhI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

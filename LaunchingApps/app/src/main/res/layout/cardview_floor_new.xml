@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/cardview_floor"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/onehundredfifty_dp"
+    app:contentPadding="0dp"
+    app:contentPaddingLeft="0dp"
+    app:contentPaddingRight="0dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/five_sp">
+
+    <LinearLayout
+        android:id="@+id/onClick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/twenty_dp"
+            android:paddingLeft="@dimen/ten_dp"
+            android:paddingRight="@dimen/ten_dp"
+            android:paddingBottom="@dimen/twenty_dp"
+            android:layout_width="@dimen/onehundredten_dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/five_sp"
+            android:background="#F2F2F2"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/eighty_dp"
+                android:layout_height="@dimen/eighty_dp"
+                android:background="@drawable/floor_container">
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:text="Floor"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/fivteen_sp" />
+
+                <TextView
+                    android:id="@+id/floor_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:text="8"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/tweleve_sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/five_sp"
+            android:layout_marginLeft="@dimen/two_sp"
+            android:layout_marginRight="@dimen/two_sp"
+            android:layout_marginTop="@dimen/twenty_sp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentTop="false"
+                android:clipToPadding="false"
+                android:transcriptMode="normal" />
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerview_bottom"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="55sp"-->
+                <!--android:layout_alignParentBottom="true" />-->
+        <!--</RelativeLayout>-->
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

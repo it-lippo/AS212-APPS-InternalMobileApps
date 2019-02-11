@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/bg">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/twenty_dp"
+            android:paddingRight="@dimen/twenty_dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wolf"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/onehundredfifty_dp"
+                android:src="@drawable/lippohomes"
+                android:layout_marginTop="@dimen/fifty_dp"
+                android:layout_centerHorizontal="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/fifty_dp">
+
+                <TextView
+                    android:text="Network Connection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <RadioGroup
+                    android:id="@+id/RadioGroupnet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checkedButton="@+id/radioIntra"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/fivteen_dp">
+
+                    <RadioButton
+                        android:text="Intranet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioIntra"
+                        android:textColor="#fff"
+                        android:drawableTop="@drawable/intranet"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/radio_background"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="Internet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioInter"
+                        android:textColor="#fff"
+                        android:drawableTop="@drawable/internet"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:background="@drawable/radio_background"
+                        android:layout_weight="1" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fivteen_dp"
+        android:padding="@dimen/thirteen_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/twenty_dp"/>
+
+
+</RelativeLayout>

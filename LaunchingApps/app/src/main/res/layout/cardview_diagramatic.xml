@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_floor"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/onehundredthirty_sp"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/two_sp">
+
+    <LinearLayout
+        android:id="@+id/onClick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/five_sp"
+            android:background="#000000"
+            android:layout_width="100sp">
+
+            <RelativeLayout
+                android:layout_centerInParent="true"
+                android:id="@+id/floor_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/floor_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="39 B"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/fourty_sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:text="th"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textSize="28sp" />-->
+
+                <TextView
+                    android:layout_below="@id/floor_text"
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="FLOOR"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/five_sp"
+            android:layout_marginTop="@dimen/five_sp"
+            android:layout_marginRight="@dimen/five_sp"
+            android:background="@drawable/bgrect">
+
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five_sp"
+                android:layout_marginTop="@dimen/five_sp"
+                android:layout_marginRight="@dimen/five_sp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/text_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/five_sp"
+                    android:paddingLeft="@dimen/five_sp"
+                    android:paddingTop="@dimen/five_sp"
+                    android:textColor="@color/white"
+                    android:text="TOTAL UNIT : 60"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/fourteen_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_total"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/five_sp"
+                    android:paddingTop="@dimen/ten_sp"
+                    android:text="AVAILABLE UNIT : 40"
+                    android:textAllCaps="true"
+                    android:textColor="#00de0b"
+                    android:textSize="@dimen/fourteen_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/persen_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="@dimen/twenty_sp"
+                    android:text="60%"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/thirty_sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty_sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/two_sp">
+
+                <ProgressBar
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/CustomProgressBarHorizontal"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
